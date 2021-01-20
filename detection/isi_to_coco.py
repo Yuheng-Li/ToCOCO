@@ -9,7 +9,7 @@ from pycococreatortools import pycococreatortools
 
 """
 
-This code is to convert image/semantic/instance(isi) annotation type to coco type.
+This code is to convert image/semantic/instance(isi) annotation type (used in SceneGAN) to coco type.
 
 isi means for each image file you have two additional annotation files, 
 one is semantic segmentation(1 channel image format), 
@@ -22,7 +22,10 @@ For ins.png each number represent an instance(not aware of class)
 
 According to your dataset, you may want to rewrite get_mapping() and get_files()
 
-NOTE: during process we assume 0 as unlabled class 
+NOTE: during process we assume 0 as unlabled class, and will not process it 
+
+I ran into some issues when setup pycococreatortools, so I directly download the folder pycococreatortools
+from https://github.com/waspinator/pycococreator and put it here
 
 """
 
